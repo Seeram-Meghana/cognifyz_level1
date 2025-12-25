@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Webpage</title>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #0e151d;
+        }
+
+        p {
+            font-size: 18px;
+            color: #202020;
+        }
+
+        img {
+            width: 200px;
+            margin-top: 15px;
+        }
+        nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: rgb(228, 220, 220);
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+form {
+    margin-top: 20px;
+}
+
+input {
+    padding: 8px;
+    width: 200px;
+}
+
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Multi task Webpage</h1>
+    <h3>Change Button Color</h3>
+
+<button id="colorBtn" onclick="changeColor()">Click Me</button>
+
+    <p>This Webpage is Created using HTML and CSS and JS.</p>
+
+    <img src="image2.jpg" alt="Sample Image">
+    <form>
+    <h3>Basic Form</h3>
+
+    <input type="text" placeholder="Enter your name">
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+<script>
+   function changeColor() {
+        document.getElementById("colorBtn").style.backgroundColor = "green";
+    }
+
+    function showGreeting() {
+        let hour = new Date().getHours();
+        let message;
+
+        if (hour < 12) {
+            message = "Good Morning!";
+        } else if (hour < 18) {
+            message = "Good Afternoon!";
+        } else {
+            message = "Good Evening!";
+        }
+
+        alert(message);
+    }
+
+    function addNumbers() {
+        let n1 = Number(document.getElementById("num1").value);
+        let n2 = Number(document.getElementById("num2").value);
+
+        let sum = n1 + n2;
+
+        document.getElementById("result").innerText = "Result: " + sum;
+    }
+</script>
+<h3>Greeting Message</h3>
+
+<button onclick="showGreeting()">Show Greeting</button>
+
+<h3>Simple Calculator</h3>
+
+<input type="number" id="num1" placeholder="Number 1">
+<input type="number" id="num2" placeholder="Number 2">
+
+<br><br>
+
+<button onclick="addNumbers()">Add</button>
+
+<p id="result"></p>
+
+</body>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+</html>
